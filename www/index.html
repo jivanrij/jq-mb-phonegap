@@ -17,21 +17,14 @@
             <div data-role="navbar">
                 <ul>
                     <li><a class="nav" href="#home">Mobile demo</a></li>
-                    <li><a class="nav" href="#read">Read</a></li>
-                    <li><a class="nav" href="#add">Add</a></li>
+                    <li><a class="nav" href="#add">Add values</a></li>
+                    <li><a class="nav" href="#read">Read values</a></li>
                 </ul>
             </div>
 
             <div role="main" class="ui-content">
                 <div id="home-tpl" class="tpl">
                     <div>
-                        <ul data-role="listview" data-inset="true" data-filter="true">
-                            <li><a href="#">Acura</a></li>
-                            <li><a href="#">Audi</a></li>
-                            <li><a href="#">BMW</a></li>
-                            <li><a href="#">Cadillac</a></li>
-                            <li><a href="#">Ferrari</a></li>
-                        </ul>
                         <form>
                             <label for="slider-0">Input slider:</label>
                             <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
@@ -41,15 +34,22 @@
                     </div>
                 </div>
                 <div id="read-tpl" class="tpl">
-                    Page for reading data from the data storage
+                    <ul data-role="listview" data-inset="true" data-filter="true">
+                    </ul>
                 </div>
                 <div id="add-tpl" class="tpl">
-                    Page for adding data to the data storage
+                    <label for="basic">Text Input:</label>
+                    <input type="text" name="name" id="basic" value="">
+                    <input type="button" id="save_input" value="Save">
+                    <input type="button" id="clear" value="Clear data">
                 </div>
             </div>
         </div>
         <script src="phonegap.js"></script>
         <script src="websql-store.js"></script>
+        <script src="views/addView.js"></script>
+        <script src="views/homeView.js"></script>
+        <script src="views/readView.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

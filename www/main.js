@@ -8,15 +8,13 @@ var app = {
     },
     
     navigate: function (page) {
-        $(".tpl").hide();
         if (page == '#read') {
-            $("#read-tpl").show();
+            this.readView.show();
         } else if (page == '#add') {
-            $("#add-tpl").show();
+            this.addView.show();
         } else {
-            $("#home-tpl").show();
+            this.homeView.show();
         }
-        return;
     },
     
     registerEvents: function() {
@@ -31,9 +29,17 @@ var app = {
     
     initialize: function () {
         var self = this;
-        this.store = new WebSqlStore(function() {
+        this.storage = new WebSqlStore(function() {
         });
-        self.navigate();
+        
+//        this.storage.addValue('as234');
+//        this.storage.readAll();
+        
+        self.readView = new readView(self.storage);
+        self.addView = new addView(self.storage);
+        self.homeView = new homeView(self.storage);
+        
+        self.navigate('#home');
         self.registerEvents();
     }
 
