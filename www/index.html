@@ -21,6 +21,7 @@
                     <li><a class="nav" href="#home">Welcome</a></li>
                     <li><a class="nav" href="#add">Edit values</a></li>
                     <li><a class="nav" href="#read">Read values</a></li>
+                    <li><a class="nav" href="#json">Json</a></li>
                 </ul>
             </div>
 
@@ -41,6 +42,21 @@
                     <input type="button" id="save_input" value="Store value">
                     <input type="button" id="clear" value="Clear table">
                 </div>
+                <div id="json-tpl" class="tpl">
+                    <p>
+                        In this screen you are able to get some json from jsonplaceholder.typicode.com. Examples are:
+                        <ul>
+                            <li>http://jsonplaceholder.typicode.com/posts/1</li>
+                            <li>http://jsonplaceholder.typicode.com/posts/1/comments</li>
+                            <li>http://jsonplaceholder.typicode.com/posts</li>
+                            <li>http://jsonplaceholder.typicode.com/photos</li>
+                            <li>http://jsonplaceholder.typicode.com/albums</li>
+                        </ul>
+                    </p>
+                    <input type="text" name="json_source" id="json_source" value="http://jsonplaceholder.typicode.com/users" />
+                    <input type="button" id="get_json" value="Get json">
+                    <p id="json_placeholder"></p>
+                </div>
             </div>
         </div>
         <script src="phonegap.js"></script>
@@ -48,6 +64,7 @@
         <script src="views/addView.js"></script>
         <script src="views/homeView.js"></script>
         <script src="views/readView.js"></script>
+        <script src="views/jsonView.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

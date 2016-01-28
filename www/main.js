@@ -12,6 +12,8 @@ var app = {
             this.readView.show();
         } else if (page == '#add') {
             this.addView.show();
+        } else if (page == '#json') {
+            this.jsonView.show();
         } else {
             this.homeView.show();
         }
@@ -38,6 +40,7 @@ var app = {
         self.readView = new readView(self.storage);
         self.addView = new addView(self.storage);
         self.homeView = new homeView(self.storage);
+        self.jsonView = new jsonView(self);
         
         self.navigate('#home');
         self.registerEvents();
