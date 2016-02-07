@@ -14,7 +14,6 @@ var jsonView = function (app) {
         $.ajax({
             type: "GET",
             url: $("#json_source").val(),
-            contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) { // Response function
                 self.echoJson(data);
